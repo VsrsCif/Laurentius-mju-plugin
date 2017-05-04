@@ -1,0 +1,1470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="0b29499b-238d-4c0d-aeae-5dca3245201b" activeEnvironment="Default" name="2NoviNamespaceMjuDms8080" resourceRoot="" soapui-version="5.2.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="d8b28eab-efc6-4a2f-924c-a49417b7565b" wsaVersion="NONE" name="MjuDmsWebServiceServiceSoapBinding" type="wsdl" bindingName="{http://dms.mju.comtrade.com/}MjuDmsWebServiceServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://evrocanje.hermes.si:8080/EV.webservice/services/mjudms?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://evrocanje.hermes.si:8080/EV.webservice/services/mjudms?wsdl"><con:part><con:url>http://evrocanje.hermes.si:8080/EV.webservice/services/mjudms?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="MjuDmsWebServiceService" targetNamespace="http://dms.mju.comtrade.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://dms.mju.comtrade.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns3="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://nio.gov.si/cev/2015/">
+  <wsdl:import location="http://evrocanje.hermes.si:8080/EV.webservice/services/mjudms?wsdl=MjuDmsWSPortBinding.wsdl" namespace="http://nio.gov.si/cev/2015/"></wsdl:import>
+  <wsdl:binding name="MjuDmsWebServiceServiceSoapBinding" type="ns1:MjuDmsWSPortBinding">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getMessageDeliveryForMail">
+      <soap:operation soapAction="http://nio.gov.si/cev/2015/getMessageDeliveryForMail" style="document"/>
+      <wsdl:input name="getMessageDeliveryForMail">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getMessageDeliveryForMailResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="DmsFault">
+        <soap:fault name="DmsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="checkEBoxAddress">
+      <soap:operation soapAction="http://nio.gov.si/cev/2015/checkEBoxAddress" style="document"/>
+      <wsdl:input name="checkEBoxAddress">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="checkEBoxAddressResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="DmsFault">
+        <soap:fault name="DmsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="deliverMessage">
+      <soap:operation soapAction="http://nio.gov.si/cev/2015/deliverMessage" style="document"/>
+      <wsdl:input name="deliverMessage">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="deliverMessageResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="DmsFault">
+        <soap:fault name="DmsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getSigningRequests">
+      <soap:operation soapAction="http://nio.gov.si/cev/2015/getSigningRequests" style="document"/>
+      <wsdl:input name="getSigningRequests">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getSigningRequestsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="DmsFault">
+        <soap:fault name="DmsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getUndeliveredAdvice">
+      <soap:operation soapAction="http://nio.gov.si/cev/2015/getUndeliveredAdvice" style="document"/>
+      <wsdl:input name="getUndeliveredAdvice">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getUndeliveredAdviceResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="DmsFault">
+        <soap:fault name="DmsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getUndeliveredMessages">
+      <soap:operation soapAction="http://nio.gov.si/cev/2015/getUndeliveredMessages" style="document"/>
+      <wsdl:input name="getUndeliveredMessages">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getUndeliveredMessagesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="DmsFault">
+        <soap:fault name="DmsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="acknowledgeAdviceDelivery">
+      <soap:operation soapAction="http://nio.gov.si/cev/2015/acknowledgeAdviceDelivery" style="document"/>
+      <wsdl:input name="acknowledgeAdviceDelivery">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="acknowledgeAdviceDeliveryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="DmsFault">
+        <soap:fault name="DmsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="acknowledgeMessagesDelivery">
+      <soap:operation soapAction="http://nio.gov.si/cev/2015/acknowledgeMessagesDelivery" style="document"/>
+      <wsdl:input name="acknowledgeMessagesDelivery">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="acknowledgeMessagesDeliveryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="DmsFault">
+        <soap:fault name="DmsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="acknowledgeSigningRequestsDelivery">
+      <soap:operation soapAction="http://nio.gov.si/cev/2015/acknowledgeSigningRequestsDelivery" style="document"/>
+      <wsdl:input name="acknowledgeSigningRequestsDelivery">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="acknowledgeSigningRequestsDeliveryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="DmsFault">
+        <soap:fault name="DmsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MjuDmsWebServiceService">
+    <wsdl:port binding="tns:MjuDmsWebServiceServiceSoapBinding" name="MjuDmsWebServicePort">
+      <soap:address location="http://evrocanje.hermes.si:8080/EV.webservice/services/mjudms"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://evrocanje.hermes.si:8080/EV.webservice/services/mjudms?wsdl=MjuDmsWSPortBinding.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="MjuDmsWSPortBinding" targetNamespace="http://nio.gov.si/cev/2015/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns2="http://nio.gov.si/cev/2015/Document" xmlns:ns1="http://nio.gov.si/cev/2015/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://nio.gov.si/cev/2015/Message" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://nio.gov.si/cev/2015/Message">
+      <xs:element name="DeliveryNotification" type="xs:anyType"/>
+      <xs:element name="DeliveryResponse" type="tns:DeliveryResponseType"/>
+      <xs:element name="DeliveryType" type="xs:string"/>
+      <xs:element name="FormDocument" type="xs:anyType"/>
+      <xs:element name="Message" type="tns:MessageType"/>
+      <xs:element name="MessageId" type="xs:string"/>
+      <xs:element name="ReceiptAdvice" type="tns:ReceiptAdviceType"/>
+      <xs:complexType name="MessageType">
+        <xs:sequence>
+          <xs:element name="To" type="tns:AddressesType"/>
+          <xs:element name="From" type="tns:AddressType"/>
+          <xs:element name="Subject" type="xs:string"/>
+          <xs:element name="MessageId" type="xs:string"/>
+          <xs:element minOccurs="0" name="SenderDocumentId" type="xs:string"/>
+          <xs:element name="DocumentType" type="xs:string"/>
+          <xs:element minOccurs="0" name="Body" type="xs:string"/>
+          <xs:element name="DeliveryType" type="xs:string"/>
+          <xs:element minOccurs="0" name="RelatesTo" type="xs:anyURI"/>
+          <xs:element minOccurs="0" name="Content" type="tns:ContentType"/>
+          <xs:element minOccurs="0" name="DocumentInfo" type="tns:DocumentInfoType"/>
+        </xs:sequence>
+        <xs:attribute name="schemaVersion" type="xs:decimal" use="required"/>
+      </xs:complexType>
+      <xs:complexType name="AddressesType">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="Address" type="tns:AddressType"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="AddressType">
+        <xs:sequence>
+          <xs:element name="PoBoxId" type="xs:string"/>
+          <xs:element minOccurs="0" name="TaxNo" type="xs:string"/>
+          <xs:element minOccurs="0" name="URI" type="xs:anyURI"/>
+          <xs:element minOccurs="0" name="PhysicalAddress" type="tns:PhysicalAddressType"/>
+          <xs:element minOccurs="0" name="NotificationEmails">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" name="NotificationEmail" type="xs:string"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PhysicalAddressType">
+        <xs:sequence>
+          <xs:element name="Name" type="xs:string"/>
+          <xs:element name="Street" type="xs:string"/>
+          <xs:element name="PostalCode" type="xs:string"/>
+          <xs:element name="City" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ContentType">
+        <xs:sequence>
+          <xs:any namespace="##other" processContents="lax"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ReceiptAdviceType">
+        <xs:sequence>
+          <xs:element name="DeliveryType" type="xs:string"/>
+          <xs:element name="Status" type="xs:string"/>
+          <xs:element name="EventTime" type="xs:dateTime"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DeliveryResponseType">
+        <xs:sequence>
+          <xs:element name="DeliveryType" type="xs:string"/>
+          <xs:element name="Status" type="xs:string"/>
+          <xs:element name="EventTime" type="xs:dateTime"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DocumentInfoType">
+        <xs:sequence>
+          <xs:element name="DocumentDate" type="xs:dateTime"/>
+          <xs:element name="DocumentId" type="xs:string"/>
+          <xs:element name="SubjectId" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://nio.gov.si/cev/2015/Document" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://nio.gov.si/cev/2015/Document" xmlns:ns1="http://nio.gov.si/cev/2015/Message">
+      <xs:import namespace="http://nio.gov.si/cev/2015/Message"/>
+      <xs:element name="Document">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="tns:DocumentType">
+              <xs:sequence/>
+              <xs:attribute name="schemaVersion" type="xs:decimal" use="required"/>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="DocumentType">
+        <xs:sequence>
+          <xs:element name="Data" type="tns:DataType"/>
+          <xs:element name="Visualisations" type="tns:VisualisationsType"/>
+          <xs:element minOccurs="0" name="Attachments" type="tns:AttachmentsType"/>
+          <xs:element name="Signatures" type="tns:SignaturesType"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DataType">
+        <xs:complexContent>
+          <xs:extension base="tns:MsgDataTypeBase">
+            <xs:sequence/>
+            <xs:attribute name="Id" type="xs:ID" use="required"/>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="MsgDataTypeBase">
+        <xs:sequence>
+          <xs:element name="DataFormat" type="tns:DataObjectFormatType"/>
+          <xs:element name="Description" type="xs:string"/>
+          <xs:element name="Content" type="tns:EmbeddedMsgDataType"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DataObjectFormatType">
+        <xs:sequence>
+          <xs:element name="Identifier" type="xs:string"/>
+          <xs:element name="MimeType" type="xs:string"/>
+          <xs:element name="Encoding" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="EmbeddedMsgDataType">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" ref="ns1:Message"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="VisualisationsType">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="Visualisation" type="tns:VisualisationType"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="VisualisationType">
+        <xs:complexContent>
+          <xs:extension base="tns:DataTypeBase">
+            <xs:sequence/>
+            <xs:attribute name="Id" type="xs:ID" use="required"/>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="DataTypeBase">
+        <xs:sequence>
+          <xs:element name="DataFormat" type="tns:DataObjectFormatType"/>
+          <xs:element name="Description" type="xs:string"/>
+          <xs:element name="Content" type="tns:ContentType"/>
+          <xs:element minOccurs="0" name="FileName" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ContentType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EmbeddedData" type="tns:EmbeddedDataType"/>
+          <xs:element minOccurs="0" name="ReferencedData" type="tns:ReferencedDataType"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType mixed="true" name="EmbeddedDataType">
+        <xs:sequence>
+          <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="AttachmentType">
+        <xs:complexContent>
+          <xs:extension base="tns:DataTypeBase">
+            <xs:sequence/>
+            <xs:attribute name="Id" type="xs:ID" use="required"/>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="AttachmentsType">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="Attachment" type="tns:AttachmentType"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ReferencedDataType">
+        <xs:sequence>
+          <xs:element name="DigestMethod" type="xs:string"/>
+          <xs:element name="DigestValue" type="xs:base64Binary"/>
+          <xs:element name="URI" type="xs:anyURI"/>
+          <xs:element name="Size" type="xs:integer"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SignaturesType">
+        <xs:sequence>
+          <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://nio.gov.si/cev/2015/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://nio.gov.si/cev/2015/" xmlns:ns1="http://nio.gov.si/cev/2015/Document">
+      <xs:import namespace="http://nio.gov.si/cev/2015/Document"/>
+      <xs:element name="AcknowledgeAdviceDeliveryRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="MessageUuid" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AcknowledgeMessagesDeliveryRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="MessageUuid" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AcknowledgeSigningRequestsDeliveryRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="MessageUuid" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddDeliveryAdviceResponse" type="xs:boolean"/>
+      <xs:element name="CheckEBoxAddressResponse">
+        <xs:complexType>
+          <xs:sequence/>
+          <xs:attribute name="eBoxAddress" type="xs:string"/>
+          <xs:attribute name="eBoxAddressExists" type="xs:boolean"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DmsException">
+        <xs:complexType>
+          <xs:sequence/>
+          <xs:attribute name="code" type="xs:int" use="required"/>
+          <xs:attribute name="subCode" type="xs:int" use="required"/>
+          <xs:attribute name="description" type="xs:string" use="required"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetMessageDeliveryForMailResponse">
+        <xs:complexType mixed="true">
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="ns1:Document"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetSigningRequestsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="Advice" type="tns:AdviceType"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetUndeliveredAdviceResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="MailMessage" type="tns:MailMessage"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetUndeliveredMessagesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="MailMessage" type="tns:MailMessage"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="AdviceType">
+        <xs:sequence>
+          <xs:element name="From" type="xs:string"/>
+          <xs:element name="To" type="xs:string"/>
+          <xs:element name="Subject" type="xs:string"/>
+          <xs:element name="MessageId" type="xs:string"/>
+          <xs:element minOccurs="0" name="SenderDocumentId" type="xs:string"/>
+          <xs:element name="DeliveryType" type="xs:string"/>
+          <xs:element minOccurs="0" name="RelatesTo" type="xs:string"/>
+          <xs:element minOccurs="0" name="MessageUuid" type="xs:string"/>
+          <xs:element name="SignLink" type="xs:anyURI"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="MailMessage">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MessageUuid" type="xs:string"/>
+          <xs:element minOccurs="0" name="MailMessageContent" type="tns:MailMessageContentType"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType mixed="true" name="MailMessageContentType">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" ref="ns1:Document"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="GetMessageDeliveryForMailRequest" nillable="true" type="xs:string"/>
+      <xs:element name="CheckEBoxAddressRequest" nillable="true" type="xs:string"/>
+      <xs:element name="GetSigningRequestsRequest" nillable="true" type="xs:int"/>
+      <xs:element name="GetUndeliveredMessagesRequest" nillable="true" type="xs:int"/>
+      <xs:element name="GetUndeliveredAdviceRequest" nillable="true" type="xs:int"/>
+      <xs:element name="AcknowledgeAdviceDeliveryResponse" nillable="true" type="xs:boolean"/>
+      <xs:element name="AcknowledgeMessagesDeliveryResponse" nillable="true" type="xs:boolean"/>
+      <xs:element name="AcknowledgeSigningRequestsDeliveryResponse" nillable="true" type="xs:boolean"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="acknowledgeMessagesDelivery">
+    <wsdl:part element="ns1:AcknowledgeMessagesDeliveryRequest" name="AcknowledgeMessagesDeliveryRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUndeliveredAdviceResponse">
+    <wsdl:part element="ns1:GetUndeliveredAdviceResponse" name="GetUndeliveredAdviceResult"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getSigningRequests">
+    <wsdl:part element="ns1:GetSigningRequestsRequest" name="GetSigningRequestsRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="checkEBoxAddress">
+    <wsdl:part element="ns1:CheckEBoxAddressRequest" name="CheckEBoxAddressRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUndeliveredMessagesResponse">
+    <wsdl:part element="ns1:GetUndeliveredMessagesResponse" name="GetUndeliveredMessagesResult"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="acknowledgeSigningRequestsDeliveryResponse">
+    <wsdl:part element="ns1:AcknowledgeSigningRequestsDeliveryResponse" name="AcknowledgeSigningRequestsDeliveryResult"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUndeliveredAdvice">
+    <wsdl:part element="ns1:GetUndeliveredAdviceRequest" name="GetUndeliveredAdviceRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getMessageDeliveryForMail">
+    <wsdl:part element="ns1:GetMessageDeliveryForMailRequest" name="GetMessageDeliveryForMailRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUndeliveredMessages">
+    <wsdl:part element="ns1:GetUndeliveredMessagesRequest" name="GetUndeliveredMessagesRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="acknowledgeMessagesDeliveryResponse">
+    <wsdl:part element="ns1:AcknowledgeMessagesDeliveryResponse" name="AcknowledgeMessagesDeliveryResult"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="acknowledgeSigningRequestsDelivery">
+    <wsdl:part element="ns1:AcknowledgeSigningRequestsDeliveryRequest" name="AcknowledgeSigningRequestsDeliveryRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="checkEBoxAddressResponse">
+    <wsdl:part element="ns1:CheckEBoxAddressResponse" name="checkEBoxAddressResult"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deliverMessage">
+    <wsdl:part element="ns2:Document" name="DeliverMessageRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deliverMessageResponse">
+    <wsdl:part element="ns2:Document" name="DeliverMessageResult"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getSigningRequestsResponse">
+    <wsdl:part element="ns1:GetSigningRequestsResponse" name="GetSigningRequestsResult"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="acknowledgeAdviceDeliveryResponse">
+    <wsdl:part element="ns1:AcknowledgeAdviceDeliveryResponse" name="AcknowledgeAdviceDeliveryResult"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getMessageDeliveryForMailResponse">
+    <wsdl:part element="ns1:GetMessageDeliveryForMailResponse" name="GetMessageDeliveryForMailResult"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="DmsFault">
+    <wsdl:part element="ns1:DmsException" name="DmsFault"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="acknowledgeAdviceDelivery">
+    <wsdl:part element="ns1:AcknowledgeAdviceDeliveryRequest" name="AcknowledgeAdviceDeliveryRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="MjuDmsWSPortBinding">
+    <wsdl:operation name="getMessageDeliveryForMail">
+      <wsdl:input message="ns1:getMessageDeliveryForMail" name="getMessageDeliveryForMail"></wsdl:input>
+      <wsdl:output message="ns1:getMessageDeliveryForMailResponse" name="getMessageDeliveryForMailResponse"></wsdl:output>
+      <wsdl:fault message="ns1:DmsFault" name="DmsFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="checkEBoxAddress">
+      <wsdl:input message="ns1:checkEBoxAddress" name="checkEBoxAddress"></wsdl:input>
+      <wsdl:output message="ns1:checkEBoxAddressResponse" name="checkEBoxAddressResponse"></wsdl:output>
+      <wsdl:fault message="ns1:DmsFault" name="DmsFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="deliverMessage">
+      <wsdl:input message="ns1:deliverMessage" name="deliverMessage"></wsdl:input>
+      <wsdl:output message="ns1:deliverMessageResponse" name="deliverMessageResponse"></wsdl:output>
+      <wsdl:fault message="ns1:DmsFault" name="DmsFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getSigningRequests">
+      <wsdl:input message="ns1:getSigningRequests" name="getSigningRequests"></wsdl:input>
+      <wsdl:output message="ns1:getSigningRequestsResponse" name="getSigningRequestsResponse"></wsdl:output>
+      <wsdl:fault message="ns1:DmsFault" name="DmsFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getUndeliveredMessages">
+      <wsdl:input message="ns1:getUndeliveredMessages" name="getUndeliveredMessages"></wsdl:input>
+      <wsdl:output message="ns1:getUndeliveredMessagesResponse" name="getUndeliveredMessagesResponse"></wsdl:output>
+      <wsdl:fault message="ns1:DmsFault" name="DmsFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getUndeliveredAdvice">
+      <wsdl:input message="ns1:getUndeliveredAdvice" name="getUndeliveredAdvice"></wsdl:input>
+      <wsdl:output message="ns1:getUndeliveredAdviceResponse" name="getUndeliveredAdviceResponse"></wsdl:output>
+      <wsdl:fault message="ns1:DmsFault" name="DmsFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="acknowledgeAdviceDelivery">
+      <wsdl:input message="ns1:acknowledgeAdviceDelivery" name="acknowledgeAdviceDelivery"></wsdl:input>
+      <wsdl:output message="ns1:acknowledgeAdviceDeliveryResponse" name="acknowledgeAdviceDeliveryResponse"></wsdl:output>
+      <wsdl:fault message="ns1:DmsFault" name="DmsFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="acknowledgeMessagesDelivery">
+      <wsdl:input message="ns1:acknowledgeMessagesDelivery" name="acknowledgeMessagesDelivery"></wsdl:input>
+      <wsdl:output message="ns1:acknowledgeMessagesDeliveryResponse" name="acknowledgeMessagesDeliveryResponse"></wsdl:output>
+      <wsdl:fault message="ns1:DmsFault" name="DmsFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="acknowledgeSigningRequestsDelivery">
+      <wsdl:input message="ns1:acknowledgeSigningRequestsDelivery" name="acknowledgeSigningRequestsDelivery"></wsdl:input>
+      <wsdl:output message="ns1:acknowledgeSigningRequestsDeliveryResponse" name="acknowledgeSigningRequestsDeliveryResponse"></wsdl:output>
+      <wsdl:fault message="ns1:DmsFault" name="DmsFault"></wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>${#Project#DmsEndpoint}</con:endpoint><con:endpoint>http://evrocanje.hermes.si:8080/EV.webservice/services/mjudms</con:endpoint></con:endpoints><con:operation id="7c297e9b-d420-4bea-90b1-d4c15a5138e6" isOneWay="false" action="http://nio.gov.si/cev/2015/acknowledgeAdviceDelivery" name="acknowledgeAdviceDelivery" bindingOperationName="acknowledgeAdviceDelivery" type="Request-Response" outputName="acknowledgeAdviceDeliveryResponse" inputName="acknowledgeAdviceDelivery" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="aa94c189-e6f4-4e46-bb5e-412292c2a1c0" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://evrocanje.hermes.si:8080/EV.webservice/services/mjudms</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:AcknowledgeAdviceDeliveryRequest>
+         <!--Zero or more repetitions:-->
+         <ns:MessageUuid>5e0a95be-27eb-4e4a-9f84-05b0b9985dda</ns:MessageUuid>
+      </ns:AcknowledgeAdviceDeliveryRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nio.gov.si/cev/2015/acknowledgeAdviceDelivery"/><con:wsrmConfig version="1.2"/></con:call><con:call id="b2843d53-a882-412b-8b65-dd29f2a68aea" name="8 evrdmz"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#DmsEndpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:AcknowledgeAdviceDeliveryRequest>
+         <!--Zero or more repetitions:-->
+         <ns:MessageUuid>f245048d-3ff4-4dad-be50-64f82d7db8fb</ns:MessageUuid>
+      </ns:AcknowledgeAdviceDeliveryRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nio.gov.si/cev/2015/acknowledgeAdviceDelivery"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="6cc096bf-fd2c-4a5c-be46-b30d5178ec63" isOneWay="false" action="http://nio.gov.si/cev/2015/acknowledgeMessagesDelivery" name="acknowledgeMessagesDelivery" bindingOperationName="acknowledgeMessagesDelivery" type="Request-Response" outputName="acknowledgeMessagesDeliveryResponse" inputName="acknowledgeMessagesDelivery" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f6238abd-42de-4d67-ba07-0737a3f9d5ca" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://evrocanje.hermes.si:8080/EV.webservice/services/mjudms</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:AcknowledgeMessagesDeliveryRequest>
+         <!--Zero or more repetitions:-->
+         <ns:MessageUuid>f91c4bdb-3173-40ab-89d3-9e9df32eaa3a</ns:MessageUuid>
+      </ns:AcknowledgeMessagesDeliveryRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nio.gov.si/cev/2015/acknowledgeMessagesDelivery"/><con:wsrmConfig version="1.2"/></con:call><con:call id="fb08d043-7e8e-4e34-a87c-66d605b134c6" name="6 evrdmz"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#DmsEndpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:AcknowledgeMessagesDeliveryRequest>
+         <!--Zero or more repetitions:-->
+         <ns:MessageUuid>f228a5d4-54e5-419d-aaa3-044b5530e9c7</ns:MessageUuid>
+      </ns:AcknowledgeMessagesDeliveryRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nio.gov.si/cev/2015/acknowledgeMessagesDelivery"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="a42e0368-7605-4048-8154-56adb3242d4a" isOneWay="false" action="http://nio.gov.si/cev/2015/acknowledgeSigningRequestsDelivery" name="acknowledgeSigningRequestsDelivery" bindingOperationName="acknowledgeSigningRequestsDelivery" type="Request-Response" outputName="acknowledgeSigningRequestsDeliveryResponse" inputName="acknowledgeSigningRequestsDelivery" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f221d6b8-1249-4609-be47-7da64098ddb8" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://evrocanje.hermes.si:8080/EV.webservice/services/mjudms</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:AcknowledgeSigningRequestsDeliveryRequest>
+         <!--Zero or more repetitions:-->
+         <ns:MessageUuid>f91c4bdb-3173-40ab-89d3-9e9df32eaa3a</ns:MessageUuid>
+      </ns:AcknowledgeSigningRequestsDeliveryRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nio.gov.si/cev/2015/acknowledgeSigningRequestsDelivery"/><con:wsrmConfig version="1.2"/></con:call><con:call id="68b216ef-425d-4f47-bf0a-e38dcc1b3d56" name="4 evrdmz"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#DmsEndpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:AcknowledgeSigningRequestsDeliveryRequest>
+         <!--Zero or more repetitions:-->
+         <ns:MessageUuid>f228a5d4-54e5-419d-aaa3-044b5530e9c7</ns:MessageUuid>
+      </ns:AcknowledgeSigningRequestsDeliveryRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nio.gov.si/cev/2015/acknowledgeSigningRequestsDelivery"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="ba6c234a-cb3e-4741-bbce-d88072f0b922" isOneWay="false" action="http://nio.gov.si/cev/2015/checkEBoxAddress" name="checkEBoxAddress" bindingOperationName="checkEBoxAddress" type="Request-Response" outputName="checkEBoxAddressResponse" inputName="checkEBoxAddress" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5ee4f953-5d7b-4ea1-94ec-f1619978e184" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://evrocanje.hermes.si:8080/EV.webservice/services/mjudms</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:CheckEBoxAddressRequest>comtrade@sigov.si</ns:CheckEBoxAddressRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nio.gov.si/cev/2015/checkEBoxAddress"/><con:wsrmConfig version="1.2"/></con:call><con:call id="5fb5fe33-7400-4d3b-b08f-0ff27ade22f8" name="1 evrdmz"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#DmsEndpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:CheckEBoxAddressRequest>comtrade@sigov.si</ns:CheckEBoxAddressRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nio.gov.si/cev/2015/checkEBoxAddress"/><con:wsrmConfig version="1.2"/></con:call><con:call id="dc5ff106-eeb2-4ce5-a065-02bc8e05abee" name="Nepoznan prejemnik" sslKeystore="evrocanjeclient.pfx"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#DmsEndpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ns:CheckEBoxAddressRequest>bla@sigov.si</ns:CheckEBoxAddressRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nio.gov.si/cev/2015/checkEBoxAddress"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="1cc0ea99-2320-42ef-abb1-26c750cbcc4e" isOneWay="false" action="http://nio.gov.si/cev/2015/deliverMessage" name="deliverMessage" bindingOperationName="deliverMessage" type="Request-Response" outputName="deliverMessageResponse" inputName="deliverMessage" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="df00166f-8d0d-481d-940c-537fd4395da7" name="Request 1" sslKeystore="mju01.pfx"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#DmsEndpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:doc="http://nio.gov.si/cev/2015/Document" xmlns:mes="http://nio.gov.si/cev/2015/Message">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <doc:Document schemaVersion="1">
+         <doc:Data Id="Data-E6E758A6-0E96-4265-829C-F40E342BF6E4">
+            <doc:DataFormat>
+               <doc:Identifier>id3</doc:Identifier>
+               <doc:MimeType>text/xml</doc:MimeType>
+               <doc:Encoding>UTF-8</doc:Encoding>
+            </doc:DataFormat>
+            <doc:Description>Desc1</doc:Description>
+            <doc:Content>
+               <mes:Message schemaVersion="1">
+                  <mes:To>
+                     <mes:Address>
+                        <mes:PoBoxId>gpmb@test01-e-gov.si</mes:PoBoxId>
+                     </mes:Address>
+                  </mes:To>
+                  <mes:From>
+                     <mes:PoBoxId>gpmb@test01-e-gov.si</mes:PoBoxId>
+                     <mes:NotificationEmails>
+                        <mes:NotificationEmail>info.eVrocanje@ajpes.si</mes:NotificationEmail>
+                     </mes:NotificationEmails>
+                  </mes:From>
+                  <mes:Subject>eVem-GD</mes:Subject>
+                  <mes:MessageId>http://www.ajpes.si/prs-gd/0700-02-20080604-000001-1-4440-02-12719</mes:MessageId>
+                  <mes:SenderDocumentId>Sklep Srg 2008/10795 z dne 04.06.2008</mes:SenderDocumentId>
+                   <mes:DocumentType>http://nio.gov.si/cev/2015/DocumentType/DeliveryOK</mes:DocumentType>
+                  <mes:DeliveryType>Legal-ZPP</mes:DeliveryType>
+                  <mes:RelatesTo>0700-02-20080604-000001-1-4440-02</mes:RelatesTo>
+               </mes:Message>
+            </doc:Content>
+         </doc:Data>
+         <doc:Visualisations>
+            <doc:Visualisation Id="Visualisation-377817C3-7E17-481C-B559-914E99584E46">
+               <doc:DataFormat>
+                  <doc:Identifier>visualisation identifier</doc:Identifier>
+                  <doc:MimeType>text/plain</doc:MimeType>
+                  <doc:Encoding>base64</doc:Encoding>
+               </doc:DataFormat>
+               <doc:Description>Test VISUALISATION</doc:Description>
+               <doc:Content>
+                  <doc:EmbeddedData>
+                     VGVzdCBjb250ZW50IFZJU1VBTElTQVRJT04=
+                  </doc:EmbeddedData>
+               </doc:Content>
+            </doc:Visualisation>
+         </doc:Visualisations>
+         <doc:Attachments>
+            <doc:Attachment Id="vis-test-a6403283-1638-43f3-8540-8dd3ec1bd4b4">
+               <doc:DataFormat>
+                  <doc:Identifier>attachment identifier</doc:Identifier>
+                  <doc:MimeType>text/plain</doc:MimeType>
+                  <doc:Encoding>base64</doc:Encoding>
+               </doc:DataFormat>
+               <doc:Description>Test ATTACHMENT</doc:Description>
+               <doc:Content>
+                  <doc:EmbeddedData>
+                     VGVzdCBBVFRBQ0hNRU5U
+                  </doc:EmbeddedData>
+               </doc:Content>
+               <doc:FileName>attachment.txt</doc:FileName>
+            </doc:Attachment>
+         </doc:Attachments>
+         <doc:Signatures>
+         </doc:Signatures>
+      </doc:Document>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nio.gov.si/cev/2015/deliverMessage"/><con:wsrmConfig version="1.2"/></con:call><con:call id="cc27dacc-10c0-475d-bfd7-6649c4d67c06" name="2 evrdmz" sslKeystore="mju01.pfx"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#DmsEndpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:doc="http://nio.gov.si/cev/2015/Document" xmlns:mes="http://nio.gov.si/cev/2015/Message">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <doc:Document schemaVersion="1">
+         <doc:Data Id="Data-E6E758A6-0E96-4265-829C-F40E342BF6E4">
+            <doc:DataFormat>
+               <doc:Identifier>id3</doc:Identifier>
+               <doc:MimeType>text/xml</doc:MimeType>
+               <doc:Encoding>UTF-8</doc:Encoding>
+            </doc:DataFormat>
+            <doc:Description>Desc1</doc:Description>
+            <doc:Content>
+               <mes:Message schemaVersion="1">
+                  <mes:To>
+                     <mes:Address>
+                        <mes:PoBoxId>gpmb@test01-e-gov.si</mes:PoBoxId>
+                     </mes:Address>
+                  </mes:To>
+                  <mes:From>
+                     <mes:PoBoxId>gpmb@test02-e-gov.si</mes:PoBoxId>
+                     <mes:NotificationEmails>
+                        <mes:NotificationEmail>info.eVrocanje@ajpes.si</mes:NotificationEmail>
+                     </mes:NotificationEmails>
+                  </mes:From>
+                  <mes:Subject>eVem-GD</mes:Subject>
+                  <mes:MessageId>http://www.ajpes.si/prs-gd/0700-02-20080604-000001-1-4440-02-12719</mes:MessageId>
+                  <mes:SenderDocumentId>Sklep Srg 2008/10795 z dne 04.06.2008</mes:SenderDocumentId>
+                   <mes:DocumentType>http://nio.gov.si/cev/2015/DocumentType/DeliveryOK</mes:DocumentType>
+                  <mes:DeliveryType>Legal-ZPP</mes:DeliveryType>
+                  <mes:RelatesTo>0700-02-20080604-000001-1-4440-02</mes:RelatesTo>
+               </mes:Message>
+            </doc:Content>
+         </doc:Data>
+         <doc:Visualisations>
+            <doc:Visualisation Id="Visualisation-377817C3-7E17-481C-B559-914E99584E46">
+               <doc:DataFormat>
+                  <doc:Identifier>visualisation identifier</doc:Identifier>
+                  <doc:MimeType>text/plain</doc:MimeType>
+                  <doc:Encoding>base64</doc:Encoding>
+               </doc:DataFormat>
+               <doc:Description>Test VISUALISATION</doc:Description>
+               <doc:Content>
+                  <doc:EmbeddedData>
+                     VGVzdCBjb250ZW50IFZJU1VBTElTQVRJT04=
+                  </doc:EmbeddedData>
+               </doc:Content>
+            </doc:Visualisation>
+         </doc:Visualisations>
+         <doc:Attachments>
+            <doc:Attachment Id="vis-test-a6403283-1638-43f3-8540-8dd3ec1bd4b4">
+               <doc:DataFormat>
+                  <doc:Identifier>attachment identifier</doc:Identifier>
+                  <doc:MimeType>text/plain</doc:MimeType>
+                  <doc:Encoding>base64</doc:Encoding>
+               </doc:DataFormat>
+               <doc:Description>Test ATTACHMENT</doc:Description>
+               <doc:Content>
+                  <doc:EmbeddedData>
+                     VGVzdCBBVFRBQ0hNRU5U
+                  </doc:EmbeddedData>
+               </doc:Content>
+               <doc:FileName>attachment.txt</doc:FileName>
+            </doc:Attachment>
+         </doc:Attachments>
+         <doc:Signatures>
+         </doc:Signatures>
+      </doc:Document>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nio.gov.si/cev/2015/deliverMessage"/><con:wsrmConfig version="1.2"/></con:call><con:call id="e00dda9f-209d-443f-a05d-67faebf3750b" name="Nepoznan prejemnik" sslKeystore="mju01.pfx"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#DmsEndpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:doc="http://nio.gov.si/cev/2015/Document" xmlns:mes="http://nio.gov.si/cev/2015/Message">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <doc:Document schemaVersion="1">
+         <doc:Data Id="Data-E6E758A6-0E96-4265-829C-F40E342BF6E4">
+            <doc:DataFormat>
+               <doc:Identifier>id3</doc:Identifier>
+               <doc:MimeType>text/xml</doc:MimeType>
+               <doc:Encoding>UTF-8</doc:Encoding>
+            </doc:DataFormat>
+            <doc:Description>Desc1</doc:Description>
+            <doc:Content>
+               <mes:Message schemaVersion="1">
+                  <mes:To>
+                     <mes:Address>
+                        <mes:PoBoxId>gpmb1@test01-e-gov.si</mes:PoBoxId>
+                     </mes:Address>
+                  </mes:To>
+                  <mes:From>
+                     <mes:PoBoxId>gpmb@test01-e-gov.si</mes:PoBoxId>
+                     <mes:NotificationEmails>
+                        <mes:NotificationEmail>info.eVrocanje@ajpes.si</mes:NotificationEmail>
+                     </mes:NotificationEmails>
+                  </mes:From>
+                  <mes:Subject>eVem-GD</mes:Subject>
+                  <mes:MessageId>http://www.ajpes.si/prs-gd/0700-02-20080604-000001-1-4440-02-12719</mes:MessageId>
+                  <mes:SenderDocumentId>Sklep Srg 2008/10795 z dne 04.06.2008</mes:SenderDocumentId>
+                   <mes:DocumentType>http://nio.gov.si/cev/2015/DocumentType/DeliveryOK</mes:DocumentType>
+                  <mes:DeliveryType>Legal-ZPP</mes:DeliveryType>
+                  <mes:RelatesTo>0700-02-20080604-000001-1-4440-02</mes:RelatesTo>
+               </mes:Message>
+            </doc:Content>
+         </doc:Data>
+         <doc:Visualisations>
+            <doc:Visualisation Id="Visualisation-377817C3-7E17-481C-B559-914E99584E46">
+               <doc:DataFormat>
+                  <doc:Identifier>visualisation identifier</doc:Identifier>
+                  <doc:MimeType>text/plain</doc:MimeType>
+                  <doc:Encoding>base64</doc:Encoding>
+               </doc:DataFormat>
+               <doc:Description>Test VISUALISATION</doc:Description>
+               <doc:Content>
+                  <doc:EmbeddedData>
+                     VGVzdCBjb250ZW50IFZJU1VBTElTQVRJT04=
+                  </doc:EmbeddedData>
+               </doc:Content>
+            </doc:Visualisation>
+         </doc:Visualisations>
+         <doc:Attachments>
+            <doc:Attachment Id="vis-test-a6403283-1638-43f3-8540-8dd3ec1bd4b4">
+               <doc:DataFormat>
+                  <doc:Identifier>attachment identifier</doc:Identifier>
+                  <doc:MimeType>text/plain</doc:MimeType>
+                  <doc:Encoding>base64</doc:Encoding>
+               </doc:DataFormat>
+               <doc:Description>Test ATTACHMENT</doc:Description>
+               <doc:Content>
+                  <doc:EmbeddedData>
+                     VGVzdCBBVFRBQ0hNRU5U
+                  </doc:EmbeddedData>
+               </doc:Content>
+               <doc:FileName>attachment.txt</doc:FileName>
+            </doc:Attachment>
+         </doc:Attachments>
+         <doc:Signatures>
+         </doc:Signatures>
+      </doc:Document>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nio.gov.si/cev/2015/deliverMessage"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="0cfad0d0-c1f9-4297-ad73-aae1b1226bce" isOneWay="false" action="http://nio.gov.si/cev/2015/getMessageDeliveryForMail" name="getMessageDeliveryForMail" bindingOperationName="getMessageDeliveryForMail" type="Request-Response" outputName="getMessageDeliveryForMailResponse" inputName="getMessageDeliveryForMail" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e566f148-5db2-4804-8bd2-d6a917090a21" name="Request 1" wssPasswordType="" sslKeystore="src01.pfx"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://evrocanje.hermes.si:8080/EV.webservice/services/mjudms</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:GetMessageDeliveryForMailRequest>http://www.ajpes.si/prs-gd/0700-02-20080604-000001-1-4440-02-12719</ns:GetMessageDeliveryForMailRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nio.gov.si/cev/2015/getMessageDeliveryForMail"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="891370b8-d0f2-4151-92c2-8d00c1bf380d" isOneWay="false" action="http://nio.gov.si/cev/2015/getSigningRequests" name="getSigningRequests" bindingOperationName="getSigningRequests" type="Request-Response" outputName="getSigningRequestsResponse" inputName="getSigningRequests" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2822ffef-2dcf-44e8-8c94-467529b07839" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://evrocanje.hermes.si:8080/EV.webservice/services/mjudms</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:GetSigningRequestsRequest>50</ns:GetSigningRequestsRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nio.gov.si/cev/2015/getSigningRequests"/><con:wsrmConfig version="1.2"/></con:call><con:call id="fc88669b-b972-4b56-8c30-bbf18af0393e" name="3 evrdmz"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#DmsEndpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:GetSigningRequestsRequest>50</ns:GetSigningRequestsRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nio.gov.si/cev/2015/getSigningRequests"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="25e53786-acac-40de-9f2b-04bac17be393" isOneWay="false" action="http://nio.gov.si/cev/2015/getUndeliveredAdvice" name="getUndeliveredAdvice" bindingOperationName="getUndeliveredAdvice" type="Request-Response" outputName="getUndeliveredAdviceResponse" inputName="getUndeliveredAdvice" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="dd912905-d440-44eb-9059-e7b1fb2f33c8" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://evrocanje.hermes.si:8080/EV.webservice/services/mjudms</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:GetUndeliveredAdviceRequest>1</ns:GetUndeliveredAdviceRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nio.gov.si/cev/2015/getUndeliveredAdvice"/><con:wsrmConfig version="1.2"/></con:call><con:call id="722e18fb-df2e-440a-88e4-b01030579a05" name="7 evrdmz" sslKeystore="src01.pfx"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#DmsEndpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:GetUndeliveredAdviceRequest>1</ns:GetUndeliveredAdviceRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nio.gov.si/cev/2015/getUndeliveredAdvice"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="88c1d054-ddce-47a8-a465-b6694b8a97f6" isOneWay="false" action="http://nio.gov.si/cev/2015/getUndeliveredMessages" name="getUndeliveredMessages" bindingOperationName="getUndeliveredMessages" type="Request-Response" outputName="getUndeliveredMessagesResponse" inputName="getUndeliveredMessages" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="70d32532-c63c-4796-9269-40ae7bd61222" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://evrocanje.hermes.si:8080/EV.webservice/services/mjudms</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:GetUndeliveredMessagesRequest>10</ns:GetUndeliveredMessagesRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nio.gov.si/cev/2015/getUndeliveredMessages"/><con:wsrmConfig version="1.2"/></con:call><con:call id="a480ded2-2b52-47a3-b920-d6f3f796695a" name="5 evrdmz"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#DmsEndpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:GetUndeliveredMessagesRequest>10</ns:GetUndeliveredMessagesRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nio.gov.si/cev/2015/getUndeliveredMessages"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="8f4abed1-923a-46d7-a3f5-0a26c90376aa" name="MjuDmsWebServiceServiceSoapBinding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="c1a9449a-ef14-4f85-a191-8d64e9874f2f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="acknowledgeAdviceDelivery TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="191bdb50-87a1-4a7d-a209-19028d36849c" name="acknowledgeAdviceDelivery"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MjuDmsWebServiceServiceSoapBinding</con:interface><con:operation>acknowledgeAdviceDelivery</con:operation><con:request name="acknowledgeAdviceDelivery" id="5274f8a0-8734-43c7-9485-7143ce657dbb"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://evrocanje.hermes.si:8080/EV.webservice/services/mjudms</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ns:AcknowledgeAdviceDeliveryRequest>\r
+         <!--Zero or more repetitions:-->\r
+         <ns:MessageUuid>?</ns:MessageUuid>\r
+      </ns:AcknowledgeAdviceDeliveryRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://nio.gov.si/cev/2015/acknowledgeAdviceDelivery" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="0cff091e-fc05-4d54-ad77-152463899e57" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="acknowledgeMessagesDelivery TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="428c57a6-795b-4f4d-882c-f6be4dfa36fe" name="acknowledgeMessagesDelivery"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MjuDmsWebServiceServiceSoapBinding</con:interface><con:operation>acknowledgeMessagesDelivery</con:operation><con:request name="acknowledgeMessagesDelivery" id="955bac36-396d-4698-be44-a87e77079182"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://evrocanje.hermes.si:8080/EV.webservice/services/mjudms</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ns:AcknowledgeMessagesDeliveryRequest>\r
+         <!--Zero or more repetitions:-->\r
+         <ns:MessageUuid>?</ns:MessageUuid>\r
+      </ns:AcknowledgeMessagesDeliveryRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://nio.gov.si/cev/2015/acknowledgeMessagesDelivery" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="77874fd8-8a67-4ddf-bcc5-4b022428122c" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="acknowledgeSigningRequestsDelivery TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="08f9aebe-1b60-4923-bf97-939e48020817" name="acknowledgeSigningRequestsDelivery"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MjuDmsWebServiceServiceSoapBinding</con:interface><con:operation>acknowledgeSigningRequestsDelivery</con:operation><con:request name="acknowledgeSigningRequestsDelivery" id="b392f523-3842-45d7-abd0-655a3062cdd4"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://evrocanje.hermes.si:8080/EV.webservice/services/mjudms</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ns:AcknowledgeSigningRequestsDeliveryRequest>\r
+         <!--Zero or more repetitions:-->\r
+         <ns:MessageUuid>?</ns:MessageUuid>\r
+      </ns:AcknowledgeSigningRequestsDeliveryRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="http://nio.gov.si/cev/2015/acknowledgeSigningRequestsDelivery" mustUnderstand="NONE" version="200508"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="e9738ebf-249d-42ab-9e6d-3768c4c64879" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="checkEBoxAddress TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="30dab041-064c-415f-9696-d92bb25b870c" name="checkEBoxAddress"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MjuDmsWebServiceServiceSoapBinding</con:interface><con:operation>checkEBoxAddress</con:operation><con:request name="checkEBoxAddress" id="9f4d2e0e-7522-48ec-acfc-5dc13b692119"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://evrocanje.hermes.si:8080/EV.webservice/services/mjudms</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ns:CheckEBoxAddressRequest>gpmb1@test01-e-gov.si</ns:CheckEBoxAddressRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://nio.gov.si/cev/2015/checkEBoxAddress" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="6d0f5b1c-88e5-4717-b34b-cc212e6893e8" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="deliverMessage TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="c29aa864-589b-41ed-bd4b-c25460a786c7" name="deliverMessage"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MjuDmsWebServiceServiceSoapBinding</con:interface><con:operation>deliverMessage</con:operation><con:request name="deliverMessage" id="f27fae48-b190-47a1-8c90-fb15f8d4d9e0"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://evrocanje.hermes.si:8080/EV.webservice/services/mjudms</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:doc="http://nio.gov.si/cev/2015/Document" xmlns:mes="http://nio.gov.si/cev/2015/Message">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <doc:Document schemaVersion="?">\r
+         <doc:Data Id="?">\r
+            <doc:DataFormat>\r
+               <doc:Identifier>?</doc:Identifier>\r
+               <doc:MimeType>?</doc:MimeType>\r
+               <doc:Encoding>?</doc:Encoding>\r
+            </doc:DataFormat>\r
+            <doc:Description>?</doc:Description>\r
+            <doc:Content>\r
+               <!--Zero or more repetitions:-->\r
+               <mes:Message schemaVersion="?">\r
+                  <mes:To>\r
+                     <!--Zero or more repetitions:-->\r
+                     <mes:Address>\r
+                        <mes:PoBoxId>?</mes:PoBoxId>\r
+                        <!--Optional:-->\r
+                        <mes:TaxNo>?</mes:TaxNo>\r
+                        <!--Optional:-->\r
+                        <mes:URI>?</mes:URI>\r
+                        <!--Optional:-->\r
+                        <mes:PhysicalAddress>\r
+                           <mes:Name>?</mes:Name>\r
+                           <mes:Street>?</mes:Street>\r
+                           <mes:PostalCode>?</mes:PostalCode>\r
+                           <mes:City>?</mes:City>\r
+                        </mes:PhysicalAddress>\r
+                        <!--Optional:-->\r
+                        <mes:NotificationEmails>\r
+                           <!--1 or more repetitions:-->\r
+                           <mes:NotificationEmail>?</mes:NotificationEmail>\r
+                        </mes:NotificationEmails>\r
+                     </mes:Address>\r
+                  </mes:To>\r
+                  <mes:From>\r
+                     <mes:PoBoxId>?</mes:PoBoxId>\r
+                     <!--Optional:-->\r
+                     <mes:TaxNo>?</mes:TaxNo>\r
+                     <!--Optional:-->\r
+                     <mes:URI>?</mes:URI>\r
+                     <!--Optional:-->\r
+                     <mes:PhysicalAddress>\r
+                        <mes:Name>?</mes:Name>\r
+                        <mes:Street>?</mes:Street>\r
+                        <mes:PostalCode>?</mes:PostalCode>\r
+                        <mes:City>?</mes:City>\r
+                     </mes:PhysicalAddress>\r
+                     <!--Optional:-->\r
+                     <mes:NotificationEmails>\r
+                        <!--1 or more repetitions:-->\r
+                        <mes:NotificationEmail>?</mes:NotificationEmail>\r
+                     </mes:NotificationEmails>\r
+                  </mes:From>\r
+                  <mes:Subject>?</mes:Subject>\r
+                  <mes:MessageId>?</mes:MessageId>\r
+                  <!--Optional:-->\r
+                  <mes:SenderDocumentId>?</mes:SenderDocumentId>\r
+                  <mes:DocumentType>?</mes:DocumentType>\r
+                  <!--Optional:-->\r
+                  <mes:Body>?</mes:Body>\r
+                  <mes:DeliveryType>?</mes:DeliveryType>\r
+                  <!--Optional:-->\r
+                  <mes:RelatesTo>?</mes:RelatesTo>\r
+                  <!--Optional:-->\r
+                  <mes:Content>\r
+                     <!--You may enter ANY elements at this point-->\r
+                  </mes:Content>\r
+                  <!--Optional:-->\r
+                  <mes:DocumentInfo>\r
+                     <mes:DocumentDate>?</mes:DocumentDate>\r
+                     <mes:DocumentId>?</mes:DocumentId>\r
+                     <mes:SubjectId>?</mes:SubjectId>\r
+                  </mes:DocumentInfo>\r
+               </mes:Message>\r
+            </doc:Content>\r
+         </doc:Data>\r
+         <doc:Visualisations>\r
+            <!--Zero or more repetitions:-->\r
+            <doc:Visualisation Id="?">\r
+               <doc:DataFormat>\r
+                  <doc:Identifier>?</doc:Identifier>\r
+                  <doc:MimeType>?</doc:MimeType>\r
+                  <doc:Encoding>?</doc:Encoding>\r
+               </doc:DataFormat>\r
+               <doc:Description>?</doc:Description>\r
+               <doc:Content>\r
+                  <!--Optional:-->\r
+                  <doc:EmbeddedData>\r
+                     e\r
+                     <!--You may enter ANY elements at this point-->\r
+                     gero\r
+                  </doc:EmbeddedData>\r
+                  <!--Optional:-->\r
+                  <doc:ReferencedData>\r
+                     <doc:DigestMethod>?</doc:DigestMethod>\r
+                     <doc:DigestValue>cid:326367255700</doc:DigestValue>\r
+                     <doc:URI>?</doc:URI>\r
+                     <doc:Size>?</doc:Size>\r
+                  </doc:ReferencedData>\r
+               </doc:Content>\r
+               <!--Optional:-->\r
+               <doc:FileName>?</doc:FileName>\r
+            </doc:Visualisation>\r
+         </doc:Visualisations>\r
+         <!--Optional:-->\r
+         <doc:Attachments>\r
+            <!--Zero or more repetitions:-->\r
+            <doc:Attachment Id="?">\r
+               <doc:DataFormat>\r
+                  <doc:Identifier>?</doc:Identifier>\r
+                  <doc:MimeType>?</doc:MimeType>\r
+                  <doc:Encoding>?</doc:Encoding>\r
+               </doc:DataFormat>\r
+               <doc:Description>?</doc:Description>\r
+               <doc:Content>\r
+                  <!--Optional:-->\r
+                  <doc:EmbeddedData>\r
+                     cum\r
+                     <!--You may enter ANY elements at this point-->\r
+                     sonoras\r
+                  </doc:EmbeddedData>\r
+                  <!--Optional:-->\r
+                  <doc:ReferencedData>\r
+                     <doc:DigestMethod>?</doc:DigestMethod>\r
+                     <doc:DigestValue>cid:1307706021935</doc:DigestValue>\r
+                     <doc:URI>?</doc:URI>\r
+                     <doc:Size>?</doc:Size>\r
+                  </doc:ReferencedData>\r
+               </doc:Content>\r
+               <!--Optional:-->\r
+               <doc:FileName>?</doc:FileName>\r
+            </doc:Attachment>\r
+         </doc:Attachments>\r
+         <doc:Signatures>\r
+            <!--You may enter ANY elements at this point-->\r
+         </doc:Signatures>\r
+      </doc:Document>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://nio.gov.si/cev/2015/deliverMessage" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="e1e11cfc-65fd-423e-8d3e-bf2f978bf47c" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="getMessageDeliveryForMail TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="48906d83-4711-408e-befd-d38ffe1abb41" name="getMessageDeliveryForMail"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MjuDmsWebServiceServiceSoapBinding</con:interface><con:operation>getMessageDeliveryForMail</con:operation><con:request name="getMessageDeliveryForMail" id="6eae10de-bb0b-4118-86b1-800ca4959f58"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://evrocanje.hermes.si:8080/EV.webservice/services/mjudms</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ns:GetMessageDeliveryForMailRequest>?</ns:GetMessageDeliveryForMailRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="http://nio.gov.si/cev/2015/getMessageDeliveryForMail" mustUnderstand="NONE" version="200508"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="e3cb5ca9-c66b-4cab-b533-1f9ef3a39dc6" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="getSigningRequests TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="23b55228-d60d-4c12-9283-8cb6a96056fa" name="getSigningRequests"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MjuDmsWebServiceServiceSoapBinding</con:interface><con:operation>getSigningRequests</con:operation><con:request name="getSigningRequests" id="b2743715-cdda-472b-9501-9cdee6d2a55e"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://evrocanje.hermes.si:8080/EV.webservice/services/mjudms</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ns:GetSigningRequestsRequest>?</ns:GetSigningRequestsRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="http://nio.gov.si/cev/2015/getSigningRequests" mustUnderstand="NONE" version="200508"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="ad258c22-459f-4cf0-b415-76b165427ae2" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="getUndeliveredAdvice TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="2d3fbdd4-63a0-4f57-8a83-8a49e803315a" name="getUndeliveredAdvice"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MjuDmsWebServiceServiceSoapBinding</con:interface><con:operation>getUndeliveredAdvice</con:operation><con:request name="getUndeliveredAdvice" id="df6a9567-7eb3-479a-ac95-d2b9ff68be51"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://evrocanje.hermes.si:8080/EV.webservice/services/mjudms</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ns:GetUndeliveredAdviceRequest>?</ns:GetUndeliveredAdviceRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://nio.gov.si/cev/2015/getUndeliveredAdvice" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="a8dfc17a-bd62-4a07-9a01-754f1a9fae98" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="getUndeliveredMessages TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="f3f37155-36da-49ed-90c0-c3465d32eb1c" name="getUndeliveredMessages"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MjuDmsWebServiceServiceSoapBinding</con:interface><con:operation>getUndeliveredMessages</con:operation><con:request name="getUndeliveredMessages" id="2e7a6f19-d277-476f-8372-796b7a025dcd"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://evrocanje.hermes.si:8080/EV.webservice/services/mjudms</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ns:GetUndeliveredMessagesRequest>?</ns:GetUndeliveredMessagesRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="http://nio.gov.si/cev/2015/getUndeliveredMessages" mustUnderstand="NONE" version="200508"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="32cbd6cd-6f7a-43c6-9fe7-227c739a6d1d" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="SVEV1JUCelotenPostopekTestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="CheckEBoxAddressRequest" id="b5fa0630-c9ca-4ac0-bfe4-e81bb4f15d5c" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MjuDmsWebServiceServiceSoapBinding</con:interface><con:operation>checkEBoxAddress</con:operation><con:request name="CheckEBoxAddressRequest" id="c18eef68-991a-4cc4-ba41-b3312b364775" sslKeystore="evrocanjeclient.pfx"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#DmsEndpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ns:CheckEBoxAddressRequest>comtrade@sigov.si</ns:CheckEBoxAddressRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="17dbab90-9505-4cf4-ba36-892fcf72d6fd"/><con:assertion type="Schema Compliance" id="0190c6fe-abc3-4940-9797-2326ace8360e"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="b891b6ec-b98f-41f0-9a77-d7af07a6f522"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="Generate data" id="25b13072-e558-4462-b22f-e1c6bc1bfd51"><con:settings/><con:config><script>/**
+* Use the lipsum generator to generate Lorem Ipsum dummy paragraphs / words / bytes.
+*
+* Lorem Ipsum courtesy of www.lipsum.com by James Wilson
+*
+* @param what in ['paras','words','bytes'], default: 'paras'
+* @param amount of paras/words/bytes, default: 2 (for words minimum is 5, for bytes it is 27)
+* @param start always start with 'Lorem Ipsum', default = true
+**/
+def lipsum = { what = "paras", amount = 2, start = true ->
+def text = new URL("http://www.lipsum.com/feed/xml?what=$what&amp;amount=$amount&amp;start=${start?'yes':'no'}").text
+
+
+//def lipsum = {start = true ->
+//def text = new URL("http://baconipsum.com/?paras=1&amp;type=meat-and-filler").text
+
+def feed = new XmlSlurper().parseText(text)
+ 
+feed.lipsum.text()
+}
+
+def mails= ["gplj@", "gpmb@", "gpms@", "gpnm@"];
+//def domains= [["sigov.si","evrocanjeclient.pfx"],["test01-e-gov.si","mju01.pfx"],["test02-e-gov.si","mju02.pfx"],["test03-e-gov.si","mju02.pfx"],["test11-e-gov.si","src01.pfx"],["test12-e-gov.si","src02.pfx"],["test13-e-gov.si","src02.pfx"]];
+
+//z grupami
+//def domains= ["sigov.si","test01-e-gov.si","test02-e-gov.si","test03-e-gov.si","test11-e-gov.si","test12-e-gov.si","test13-e-gov.si"];
+//def certs= ["evrocanjeclient.pfx","mju01.pfx","mju02.pfx","mju02.pfx","src01.pfx","src02.pfx","src02.pfx"];
+//def length = 7;
+
+//ni grup
+//def domains= ["sigov.si","test01-e-gov.si","test02-e-gov.si","test11-e-gov.si","test12-e-gov.si"];
+//def certs= ["evrocanjeclient.pfx","mju01.pfx","mju02.pfx","src01.pfx","src02.pfx"];
+//def length = 5;
+
+//ni grup in sigov ni dovoljen
+//def domains= ["test01-e-gov.si","test02-e-gov.si","test11-e-gov.si","test12-e-gov.si"];
+//def certs= ["mju01.pfx","mju02.pfx","src01.pfx","src02.pfx"];
+//def length = 4;
+
+//za SRC
+def domains= ["test11-e-gov.si","test12-e-gov.si"];
+def certs= ["src01.pfx","src02.pfx"];
+//def length = 2;
+
+def uuid = java.util.UUID.randomUUID().toString();
+
+def randIdxEmlFrom = Math.abs(new Random().nextInt() % 4);
+def randIdxEmlTo;
+for (;;) {
+  	randIdxEmlTo = Math.abs(new Random().nextInt() % 4);
+  	if (randIdxEmlTo != randIdxEmlFrom) {
+  		break;
+  	}
+}
+
+def messageIdPart = java.util.UUID.randomUUID().toString();
+
+//email domain - part after @
+def randIdxDomainFrom = Math.abs(new Random().nextInt() % 2);
+def randIdxDomainTo = Math.abs(new Random().nextInt() % 2);
+
+testRunner.testCase.setPropertyValue('msgUuid', uuid);
+testRunner.testCase.setPropertyValue('FROM_SSL_cert', certs[randIdxDomainFrom]);
+testRunner.testCase.setPropertyValue('TO_SSL_cert', certs[randIdxDomainTo]);
+testRunner.testCase.setPropertyValue('emlFrom', mails[randIdxEmlFrom]+domains[randIdxDomainFrom]);
+testRunner.testCase.setPropertyValue('emlTo', mails[randIdxEmlTo]+domains[randIdxDomainTo]);
+//testRunner.testCase.setPropertyValue('dataDesc', lipsum());
+//testRunner.testCase.setPropertyValue('subject', lipsum());
+//testRunner.testCase.setPropertyValue('docId', lipsum());
+testRunner.testCase.setPropertyValue('dataDesc', lipsum('bytes', 27, false));
+testRunner.testCase.setPropertyValue('subject', lipsum('bytes', 27, false));
+testRunner.testCase.setPropertyValue('docId', lipsum('bytes', 27, false));
+testRunner.testCase.setPropertyValue('relatesTo', java.util.UUID.randomUUID().toString());
+testRunner.testCase.setPropertyValue('messageIdPart', messageIdPart);
+</script></con:config></con:testStep><con:testStep type="request" name="DeliverMessage" id="28e364b1-bae2-4241-8062-68b9c271e906"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MjuDmsWebServiceServiceSoapBinding</con:interface><con:operation>deliverMessage</con:operation><con:request name="DeliverMessage" id="bc81a7c8-839c-44a3-9222-b9c8b4fe966f" sslKeystore="${#TestCase#FROM_SSL_cert}"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#DmsEndpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:doc="http://nio.gov.si/cev/2015/Document" xmlns:mes="http://nio.gov.si/cev/2015/Message">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <doc:Document schemaVersion="1.0">
+         <doc:Data Id="Data-E6E758A6-0E96-4265-829C-F40E342BF6E4">
+            <doc:DataFormat>
+               <doc:Identifier>id3</doc:Identifier>
+               <doc:MimeType>text/xml</doc:MimeType>
+               <doc:Encoding>UTF-8</doc:Encoding>
+            </doc:DataFormat>
+            <doc:Description>${#TestCase#dataDesc}</doc:Description>
+            <doc:Content>
+               <mes:Message schemaVersion="1.0">
+                  <mes:To>
+                     <mes:Address>
+                        <mes:PoBoxId>${#TestCase#emlTo}</mes:PoBoxId>
+                     </mes:Address>
+                  </mes:To>
+                  <mes:From>
+                     <mes:PoBoxId>${#TestCase#emlFrom}</mes:PoBoxId>
+                     <mes:NotificationEmails>
+                        <mes:NotificationEmail>info.eVrocanje@ajpes.si</mes:NotificationEmail>
+                     </mes:NotificationEmails>
+                  </mes:From>
+                  <mes:Subject>${#TestCase#subject}</mes:Subject>
+                  <mes:MessageId>http://www.ajpes.si/prs-gd/MESSAGE_ID-${#TestCase#messageIdPart}</mes:MessageId>
+                  <mes:SenderDocumentId>${#TestCase#docId}</mes:SenderDocumentId>
+                   <mes:DocumentType>http://nio.gov.si/cev/2015/DocumentType/DeliveryOK</mes:DocumentType>
+                  <mes:DeliveryType>Legal-ZPP</mes:DeliveryType>
+                  <mes:RelatesTo>${#TestCase#relatesTo}</mes:RelatesTo>
+               </mes:Message>
+            </doc:Content>
+         </doc:Data>
+         <doc:Visualisations>
+            <doc:Visualisation Id="Visualisation-377817C3-7E17-481C-B559-914E99584E46">
+               <doc:DataFormat>
+                  <doc:Identifier>visualisation identifier</doc:Identifier>
+                  <doc:MimeType>text/plain</doc:MimeType>
+                  <doc:Encoding>base64</doc:Encoding>
+               </doc:DataFormat>
+               <doc:Description>Test VISUALISATION</doc:Description>
+               <doc:Content>
+                  <doc:EmbeddedData>
+                     VGVzdCBjb250ZW50IFZJU1VBTElTQVRJT04=
+                  </doc:EmbeddedData>
+               </doc:Content>
+            </doc:Visualisation>
+         </doc:Visualisations>
+         <doc:Attachments>
+            <doc:Attachment Id="vis-test-a6403283-1638-43f3-8540-8dd3ec1bd4b4">
+               <doc:DataFormat>
+                  <doc:Identifier>attachment identifier</doc:Identifier>
+                  <doc:MimeType>text/plain</doc:MimeType>
+                  <doc:Encoding>base64</doc:Encoding>
+               </doc:DataFormat>
+               <doc:Description>Test ATTACHMENT</doc:Description>
+               <doc:Content>
+                  <doc:EmbeddedData>
+                     VGVzdCBBVFRBQ0hNRU5U
+                  </doc:EmbeddedData>
+               </doc:Content>
+               <doc:FileName>attachment.txt</doc:FileName>
+            </doc:Attachment>
+         </doc:Attachments>
+         <doc:Signatures>
+         </doc:Signatures>
+      </doc:Document>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="954357dd-06e3-46d0-8336-56c812b66cda"/><con:assertion type="Schema Compliance" id="05ba81ac-68a1-4d4e-bcd5-36eba7d31d2b"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="640c8c72-dc7a-4ded-b144-634fa8ffec53"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="GetSigningRequestsRequest" id="6913122d-e5ce-49bc-b5fd-88777c4cd22b"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MjuDmsWebServiceServiceSoapBinding</con:interface><con:operation>getSigningRequests</con:operation><con:request name="GetSigningRequestsRequest" id="5c992baf-4b60-4337-a0e0-f97d81207e36" sslKeystore="${#TestCase#TO_SSL_cert}"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#DmsEndpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ns:GetSigningRequestsRequest>1</ns:GetSigningRequestsRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="4adde167-7def-489b-8f45-32cbbd0946f5"/><con:assertion type="Schema Compliance" id="4cd50b83-dbd8-42a2-90f7-9cd697d7bd83"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="0b60b047-c087-4033-baf0-25af2f3125f1"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer Signing" id="3bfae43e-62be-4a2b-9e5d-3c76f806fb83"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>messageUuid</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>GetSigningRequestsRequest</con:sourceStep><con:sourcePath>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace ns1='http://nio.gov.si/cev/2015/Message';
+declare namespace ns2='http://nio.gov.si/cev/2015/';
+declare namespace ns3='http://nio.gov.si/cev/2015/Document';
+declare namespace ns4='http://dms.mju.comtrade.com/';
+//ns2:MessageUuid</con:sourcePath><con:targetType>messageUuid</con:targetType><con:targetStep>#TestCase#</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>messageId</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>GetSigningRequestsRequest</con:sourceStep><con:sourcePath>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace ns1='http://nio.gov.si/cev/2015/Message';
+declare namespace ns2='http://nio.gov.si/cev/2015/';
+declare namespace ns3='http://nio.gov.si/cev/2015/Document';
+declare namespace ns4='http://dms.mju.comtrade.com/';
+//ns2:MessageId</con:sourcePath><con:targetType>idVrocitve</con:targetType><con:targetStep>#TestCase#</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="request" name="AcknowledgeSigningRequestsDeliveryRequest" id="c8b3101a-02b0-4d1d-9e10-b103faca850a"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MjuDmsWebServiceServiceSoapBinding</con:interface><con:operation>acknowledgeSigningRequestsDelivery</con:operation><con:request name="AcknowledgeSigningRequestsDeliveryRequest" id="e74daf90-69a7-4ba1-adb5-b35ff9218596" sslKeystore="${#TestCase#TO_SSL_cert}"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@skip_soap_action">false</con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#DmsEndpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ns:AcknowledgeSigningRequestsDeliveryRequest>\r
+         <ns:MessageUuid>${#TestCase#messageUuid}</ns:MessageUuid>
+      </ns:AcknowledgeSigningRequestsDeliveryRequest>
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="6b8318d0-b7df-4ec4-8a44-c434df6a1846"/><con:assertion type="Schema Compliance" id="e312a3a0-8b08-4863-8e23-1910a6e20c2c"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="01510982-627a-4c61-9616-d72164af90f9"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="httprequest" name="Sign" id="c28c3bfd-ffbc-48a1-b390-bd8a73168fc0"><con:settings/><con:config method="GET" xsi:type="con:HttpRequest" id="bcc3351d-26f3-4e38-b516-b65a0df492be" name="Sign" sslKeystore="evrocanjeclient.pfx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>${#Project#SignUrl}?uuid=${#TestCase#messageUuid}</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:config></con:testStep><con:testStep type="request" name="GetUndeliveredMessagesRequest" id="d9135ecc-9185-4c23-9631-055cdabecce4"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MjuDmsWebServiceServiceSoapBinding</con:interface><con:operation>getUndeliveredMessages</con:operation><con:request name="GetUndeliveredMessagesRequest" id="9daa0ab1-c09e-476c-8bff-68c9f3551ab0" sslKeystore="${#TestCase#TO_SSL_cert}"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#DmsEndpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ns:GetUndeliveredMessagesRequest>1</ns:GetUndeliveredMessagesRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="07e33d25-eb2c-4b31-ba6b-4ada4fa0e735"/><con:assertion type="Schema Compliance" id="4ff1c412-b61d-4288-81a1-75a01766d897"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="d34496cd-9d69-4879-bd60-89df5d605656"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="AcknowledgeMessagesDeliveryRequest" id="386f215e-703a-40c5-9b57-7f679b34245b"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MjuDmsWebServiceServiceSoapBinding</con:interface><con:operation>acknowledgeMessagesDelivery</con:operation><con:request name="AcknowledgeMessagesDeliveryRequest" id="33d02abb-ed30-42bb-8dea-fcbf20de788d" sslKeystore="${#TestCase#TO_SSL_cert}"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#DmsEndpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:AcknowledgeMessagesDeliveryRequest>
+         <ns:MessageUuid>${#TestCase#messageUuid}</ns:MessageUuid>
+      </ns:AcknowledgeMessagesDeliveryRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="9b09979e-c864-4fab-949b-13061adc27b4"/><con:assertion type="Schema Compliance" id="8a7b215a-53eb-49a6-a3e6-baa90c3f503f"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="bc7f330b-2465-4462-bda7-5804b377e2c2"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="GetUndeliveredAdviceRequest" id="6dee5b1a-db3d-4608-a338-0fd392dfdb3c"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MjuDmsWebServiceServiceSoapBinding</con:interface><con:operation>getUndeliveredAdvice</con:operation><con:request name="GetUndeliveredAdviceRequest" id="2c93ee40-bd67-413a-a14a-df6eed47d226" sslKeystore="${#TestCase#FROM_SSL_cert}"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#DmsEndpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ns:GetUndeliveredAdviceRequest>1</ns:GetUndeliveredAdviceRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="5250bfae-b750-4424-a234-e6d9ddd8f3fb"/><con:assertion type="SOAP Fault Assertion" id="6bde705b-c90c-4bc3-b209-cbc5ad28eaf8"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer Advice" id="20b3dd8a-d412-4c14-a68f-1514f200f19f"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>adviceUuid</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>GetUndeliveredAdviceRequest</con:sourceStep><con:sourcePath>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace ns1='http://nio.gov.si/cev/2015/Message';
+declare namespace ns2='http://nio.gov.si/cev/2015/';
+declare namespace ns3='http://nio.gov.si/cev/2015/Document';
+declare namespace ns4='http://dms.mju.comtrade.com/';
+//ns2:MessageUuid
+</con:sourcePath><con:targetType>adviceUuid</con:targetType><con:targetStep>#TestCase#</con:targetStep><con:targetPath/><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="request" name="AcknowledgeAdviceDeliveryRequest" id="cddf2b71-0863-4d1d-bd6f-b20b51ef11a5"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MjuDmsWebServiceServiceSoapBinding</con:interface><con:operation>acknowledgeAdviceDelivery</con:operation><con:request name="AcknowledgeAdviceDeliveryRequest" id="75c92e1c-ff13-40df-831e-73485715e3ef" sslKeystore="${#TestCase#FROM_SSL_cert}"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#DmsEndpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ns:AcknowledgeAdviceDeliveryRequest>\r
+         <ns:MessageUuid>${#TestCase#adviceUuid}</ns:MessageUuid>
+      </ns:AcknowledgeAdviceDeliveryRequest>
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="df1ab41f-9f25-4349-9605-3183851f20d9"/><con:assertion type="Schema Compliance" id="2337ba08-248c-42c2-9fe2-accd736c7314"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="aecfdcd9-ac2a-4886-b6be-74e46e9206e7"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="GetMessageDeliveryForMailRequest" id="bb57daed-8687-44aa-81a4-813984a1a54c"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MjuDmsWebServiceServiceSoapBinding</con:interface><con:operation>getMessageDeliveryForMail</con:operation><con:request name="GetMessageDeliveryForMailRequest" id="0a02646d-19ab-437a-a86e-8369afd6b4ec" sslKeystore="${#TestCase#FROM_SSL_cert}"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#DmsEndpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ns:GetMessageDeliveryForMailRequest>${#TestCase#idVrocitve}</ns:GetMessageDeliveryForMailRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="85e7f5a0-209f-4f6f-831b-63b6ee99be79"/><con:assertion type="SOAP Fault Assertion" id="94d67be6-3d23-48b0-b840-b736377cc8de"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:loadTest id="82cbf768-2ee2-4b73-9be5-20119c101020" name="LoadTestSVEV1JU"><con:settings/><con:threadCount>5</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>200</con:testLimit><con:limitType>COUNT</con:limitType><con:loadStrategy><con:type>Simple</con:type></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:properties><con:property><con:name>msgUuid</con:name><con:value>5583aa3e-8f2d-4e81-806c-90ed49b407ce</con:value></con:property><con:property><con:name>emlFrom</con:name><con:value>gplj@test11-e-gov.si</con:value></con:property><con:property><con:name>emlTo</con:name><con:value>gpnm@test11-e-gov.si</con:value></con:property><con:property><con:name>dataDesc</con:name><con:value>Maecenas finibus cras amet.</con:value></con:property><con:property><con:name>subject</con:name><con:value>Vivamus vestibulum posuere.</con:value></con:property><con:property><con:name>docId</con:name><con:value>Suspendisse fermentum amet.</con:value></con:property><con:property><con:name>relatesTo</con:name><con:value>9a6df2ae-bac9-4208-8a7e-ab2c7a86f3e3</con:value></con:property><con:property><con:name>messageUuid</con:name><con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">522f1de9-a39e-4bdf-bf77-14c8447197d8</con:value></con:property><con:property><con:name>SSL_cert</con:name><con:value>none</con:value></con:property><con:property><con:name>TO_SSL_cert</con:name><con:value>src01.pfx</con:value></con:property><con:property><con:name>adviceUuid</con:name><con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">8c471ac0-7993-4803-8719-6d3bcf8049d6</con:value></con:property><con:property><con:name>FROM_SSL_cert</con:name><con:value>src01.pfx</con:value></con:property><con:property><con:name>idVrocitve</con:name><con:value>http://www.ajpes.si/prs-gd/MESSAGE_ID-07aa498e-4efa-4850-b6c4-d5a523a07065</con:value></con:property><con:property><con:name>messageIdPart</con:name><con:value>07aa498e-4efa-4850-b6c4-d5a523a07065</con:value></con:property></con:properties></con:testCase><con:testCase id="f2350996-4bc5-4449-8a1b-d59984072eda" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="SVEV1JUToExternalTestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="CheckEBoxAddressRequest" id="a0bb574e-f187-4eb0-86cb-e46fe4570d02"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MjuDmsWebServiceServiceSoapBinding</con:interface><con:operation>checkEBoxAddress</con:operation><con:request name="CheckEBoxAddressRequest" id="c18eef68-991a-4cc4-ba41-b3312b364775" sslKeystore="evrocanjeclient.pfx"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#DmsEndpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ns:CheckEBoxAddressRequest>comtrade@poslovna.posta.si</ns:CheckEBoxAddressRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="17dbab90-9505-4cf4-ba36-892fcf72d6fd"/><con:assertion type="Schema Compliance" id="0190c6fe-abc3-4940-9797-2326ace8360e"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="b891b6ec-b98f-41f0-9a77-d7af07a6f522"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="Generate data" id="21da0925-e7ae-442c-a957-11cce1b025e6"><con:settings/><con:config><script>def uuid = java.util.UUID.randomUUID().toString();
+log.info uuid
+testRunner.testCase.setPropertyValue('msgUuid', uuid);</script></con:config></con:testStep><con:testStep type="request" name="DeliverMessage" id="dfe77b83-96be-41da-bc06-b96c23eae4a6"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MjuDmsWebServiceServiceSoapBinding</con:interface><con:operation>deliverMessage</con:operation><con:request name="DeliverMessage" id="bc81a7c8-839c-44a3-9222-b9c8b4fe966f" sslKeystore="${#TestCase#SSL_cert}"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#DmsEndpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:doc="http://nio.gov.si/cev/2015/Document" xmlns:mes="http://nio.gov.si/cev/2015/Message">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <doc:Document schemaVersion="1.0">
+         <doc:Data Id="Data-E6E758A6-0E96-4265-829C-F40E342BF6E4">
+            <doc:DataFormat>
+               <doc:Identifier>id3</doc:Identifier>
+               <doc:MimeType>text/xml</doc:MimeType>
+               <doc:Encoding>UTF-8</doc:Encoding>
+            </doc:DataFormat>
+            <doc:Description>Desc1</doc:Description>
+            <doc:Content>
+               <mes:Message schemaVersion="1.0">
+                  <mes:To>
+                     <mes:Address>
+                        <mes:PoBoxId>comtrade@poslovna.posta.si</mes:PoBoxId>
+                     </mes:Address>
+                  </mes:To>
+                  <mes:From>
+                     <mes:PoBoxId>mjuvep@gov.si</mes:PoBoxId>
+                     <mes:NotificationEmails>
+                        <mes:NotificationEmail>info.eVrocanje@ajpes.si</mes:NotificationEmail>
+                     </mes:NotificationEmails>
+                  </mes:From>
+                  <mes:Subject>eVem-GD</mes:Subject>
+                  <mes:MessageId>http://www.ajpes.si/prs-gd/${#TestCase#msgUuid}</mes:MessageId>
+                  <mes:SenderDocumentId>Sklep Srg 2008/10795 z dne 04.06.2008</mes:SenderDocumentId>
+                   <mes:DocumentType>http://nio.gov.si/cev/2015/DocumentType/DeliveryOK</mes:DocumentType>
+                  <mes:DeliveryType>Legal-ZPP</mes:DeliveryType>
+                  <mes:RelatesTo>0700-02-20080604-000001-1-4440-02</mes:RelatesTo>
+               </mes:Message>
+            </doc:Content>
+         </doc:Data>
+         <doc:Visualisations>
+            <doc:Visualisation Id="Visualisation-377817C3-7E17-481C-B559-914E99584E46">
+               <doc:DataFormat>
+                  <doc:Identifier>visualisation identifier</doc:Identifier>
+                  <doc:MimeType>text/plain</doc:MimeType>
+                  <doc:Encoding>base64</doc:Encoding>
+               </doc:DataFormat>
+               <doc:Description>Test VISUALISATION</doc:Description>
+               <doc:Content>
+                  <doc:EmbeddedData>
+                     VGVzdCBjb250ZW50IFZJU1VBTElTQVRJT04=
+                  </doc:EmbeddedData>
+               </doc:Content>
+            </doc:Visualisation>
+         </doc:Visualisations>
+         <doc:Attachments>
+            <doc:Attachment Id="vis-test-a6403283-1638-43f3-8540-8dd3ec1bd4b4">
+               <doc:DataFormat>
+                  <doc:Identifier>attachment identifier</doc:Identifier>
+                  <doc:MimeType>text/plain</doc:MimeType>
+                  <doc:Encoding>base64</doc:Encoding>
+               </doc:DataFormat>
+               <doc:Description>Test ATTACHMENT</doc:Description>
+               <doc:Content>
+                  <doc:EmbeddedData>
+                     VGVzdCBBVFRBQ0hNRU5U
+                  </doc:EmbeddedData>
+               </doc:Content>
+               <doc:FileName>attachment.txt</doc:FileName>
+            </doc:Attachment>
+         </doc:Attachments>
+         <doc:Signatures>
+         </doc:Signatures>
+      </doc:Document>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="954357dd-06e3-46d0-8336-56c812b66cda"/><con:assertion type="Schema Compliance" id="05ba81ac-68a1-4d4e-bcd5-36eba7d31d2b"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="640c8c72-dc7a-4ded-b144-634fa8ffec53"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>msgUuid</con:name><con:value>d3de6998-2938-49a6-ad73-e8ee0ff859eb</con:value></con:property><con:property><con:name>emlFrom</con:name><con:value>gpnm@sigov.si</con:value></con:property><con:property><con:name>emlTo</con:name><con:value>gpms@sigov.si</con:value></con:property><con:property><con:name>dataDesc</con:name><con:value>Integer quam orci volutpat.</con:value></con:property><con:property><con:name>subject</con:name><con:value>Nulla quis purus nec metus.</con:value></con:property><con:property><con:name>docId</con:name><con:value>Praesent blandit cras amet.</con:value></con:property><con:property><con:name>relatesTo</con:name><con:value>75ac0e1a-53fd-4dd3-8e21-797ed4dd1f06</con:value></con:property><con:property><con:name>messageUuid</con:name><con:value>1cab0423-3746-45d0-a369-aa90aef51148</con:value></con:property></con:properties></con:testCase><con:testCase id="3557e451-0ff1-4d4b-9994-7723f1f43e8b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Copy of SVEV1JUCelotenPostopekTestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="CheckEBoxAddressRequest" id="20a17629-2c5d-43dd-9328-e4e5e1c6a837" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MjuDmsWebServiceServiceSoapBinding</con:interface><con:operation>checkEBoxAddress</con:operation><con:request name="CheckEBoxAddressRequest" id="c18eef68-991a-4cc4-ba41-b3312b364775" sslKeystore="evrocanjeclient.pfx"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#DmsEndpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ns:CheckEBoxAddressRequest>comtrade@sigov.si</ns:CheckEBoxAddressRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="17dbab90-9505-4cf4-ba36-892fcf72d6fd"/><con:assertion type="Schema Compliance" id="0190c6fe-abc3-4940-9797-2326ace8360e"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="b891b6ec-b98f-41f0-9a77-d7af07a6f522"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="Generate data" id="b934359a-2cda-4e2f-906e-5bc4e7604286"><con:settings/><con:config><script>/**
+* Use the lipsum generator to generate Lorem Ipsum dummy paragraphs / words / bytes.
+*
+* Lorem Ipsum courtesy of www.lipsum.com by James Wilson
+*
+* @param what in ['paras','words','bytes'], default: 'paras'
+* @param amount of paras/words/bytes, default: 2 (for words minimum is 5, for bytes it is 27)
+* @param start always start with 'Lorem Ipsum', default = true
+**/
+def lipsum = { what = "paras", amount = 2, start = true ->
+def text = new URL("http://www.lipsum.com/feed/xml?what=$what&amp;amount=$amount&amp;start=${start?'yes':'no'}").text
+
+
+//def lipsum = {start = true ->
+//def text = new URL("http://baconipsum.com/?paras=1&amp;type=meat-and-filler").text
+
+def feed = new XmlSlurper().parseText(text)
+ 
+feed.lipsum.text()
+}
+
+def mails= ["gplj@", "gpmb@", "gpms@", "gpnm@"];
+//def domains= [["sigov.si","evrocanjeclient.pfx"],["test01-e-gov.si","mju01.pfx"],["test02-e-gov.si","mju02.pfx"],["test03-e-gov.si","mju02.pfx"],["test11-e-gov.si","src01.pfx"],["test12-e-gov.si","src02.pfx"],["test13-e-gov.si","src02.pfx"]];
+
+//z grupami
+//def domains= ["sigov.si","test01-e-gov.si","test02-e-gov.si","test03-e-gov.si","test11-e-gov.si","test12-e-gov.si","test13-e-gov.si"];
+//def certs= ["evrocanjeclient.pfx","mju01.pfx","mju02.pfx","mju02.pfx","src01.pfx","src02.pfx","src02.pfx"];
+//def length = 6;
+
+//ni grup
+//def domains= ["sigov.si","test01-e-gov.si","test02-e-gov.si","test11-e-gov.si","test12-e-gov.si"];
+//def certs= ["evrocanjeclient.pfx","mju01.pfx","mju02.pfx","src01.pfx","src02.pfx"];
+//def length = 4;
+
+//ni grup in sigov ni dovoljen
+def domains= ["test01-e-gov.si","test02-e-gov.si","test11-e-gov.si","test12-e-gov.si"];
+def certs= ["mju01.pfx","mju02.pfx","src01.pfx","src02.pfx"];
+def length = 3;
+
+def uuid = java.util.UUID.randomUUID().toString();
+
+def randIdxEmlFrom = Math.abs(new Random().nextInt() % 3) + 1;
+def randIdxEmlTo;
+for (;;) {
+  	randIdxEmlTo = Math.abs(new Random().nextInt() % 3) + 1;
+  	if (randIdxEmlTo != randIdxEmlFrom) {
+  		break;
+  	}
+}
+
+//email domain - part after @
+//def randIdxDomainFrom = Math.abs(new Random().nextInt() % length) + 1;
+//def randIdxDomainTo = Math.abs(new Random().nextInt() % length) + 1;
+def randIdxDomainFrom = Math.abs(new Random().nextInt() % 3) + 1;
+def randIdxDomainTo = Math.abs(new Random().nextInt() % 3) + 1;
+
+testRunner.testCase.setPropertyValue('msgUuid', uuid);
+testRunner.testCase.setPropertyValue('SSL_cert', certs[randIdxDomainFrom]);
+testRunner.testCase.setPropertyValue('SSL_cert_FROM', certs[randIdxDomainFrom]);
+testRunner.testCase.setPropertyValue('SSL_cert_TO', certs[randIdxDomainTo]);
+testRunner.testCase.setPropertyValue('emlFrom', mails[randIdxEmlFrom]+domains[randIdxDomainFrom]);
+testRunner.testCase.setPropertyValue('emlTo', mails[randIdxEmlTo]+domains[randIdxDomainTo]);
+//testRunner.testCase.setPropertyValue('dataDesc', lipsum());
+//testRunner.testCase.setPropertyValue('subject', lipsum());
+//testRunner.testCase.setPropertyValue('docId', lipsum());
+testRunner.testCase.setPropertyValue('dataDesc', lipsum('bytes', 27, false));
+testRunner.testCase.setPropertyValue('subject', lipsum('bytes', 27, false));
+testRunner.testCase.setPropertyValue('docId', lipsum('bytes', 27, false));
+testRunner.testCase.setPropertyValue('relatesTo', java.util.UUID.randomUUID().toString());</script></con:config></con:testStep><con:testStep type="request" name="DeliverMessage" id="a7413c86-5be9-4412-8866-abb472e124fe"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MjuDmsWebServiceServiceSoapBinding</con:interface><con:operation>deliverMessage</con:operation><con:request name="DeliverMessage" id="bc81a7c8-839c-44a3-9222-b9c8b4fe966f" sslKeystore="${#TestCase#SSL_cert}"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#DmsEndpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:doc="http://nio.gov.si/cev/2015/Document" xmlns:mes="http://nio.gov.si/cev/2015/Message">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <doc:Document schemaVersion="1.0">
+         <doc:Data Id="Data-E6E758A6-0E96-4265-829C-F40E342BF6E4">
+            <doc:DataFormat>
+               <doc:Identifier>id3</doc:Identifier>
+               <doc:MimeType>text/xml</doc:MimeType>
+               <doc:Encoding>UTF-8</doc:Encoding>
+            </doc:DataFormat>
+            <doc:Description>${#TestCase#dataDesc}</doc:Description>
+            <doc:Content>
+               <mes:Message schemaVersion="1.0">
+                  <mes:To>
+                     <mes:Address>
+                        <mes:PoBoxId>${#TestCase#emlFrom}</mes:PoBoxId>
+                     </mes:Address>
+                  </mes:To>
+                  <mes:From>
+                     <mes:PoBoxId>${#TestCase#emlTo}</mes:PoBoxId>
+                     <mes:NotificationEmails>
+                        <mes:NotificationEmail>info.eVrocanje@ajpes.si</mes:NotificationEmail>
+                     </mes:NotificationEmails>
+                  </mes:From>
+                  <mes:Subject>${#TestCase#subject}</mes:Subject>
+                  <mes:MessageId>http://www.ajpes.si/prs-gd/0700-02-20080604-000001-1-4440-02-12719</mes:MessageId>
+                  <mes:SenderDocumentId>${#TestCase#docId}</mes:SenderDocumentId>
+                   <mes:DocumentType>http://nio.gov.si/cev/2015/DocumentType/DeliveryOK</mes:DocumentType>
+                  <mes:DeliveryType>Legal-ZPP</mes:DeliveryType>
+                  <mes:RelatesTo>${#TestCase#relatesTo}</mes:RelatesTo>
+               </mes:Message>
+            </doc:Content>
+         </doc:Data>
+         <doc:Visualisations>
+            <doc:Visualisation Id="Visualisation-377817C3-7E17-481C-B559-914E99584E46">
+               <doc:DataFormat>
+                  <doc:Identifier>visualisation identifier</doc:Identifier>
+                  <doc:MimeType>text/plain</doc:MimeType>
+                  <doc:Encoding>base64</doc:Encoding>
+               </doc:DataFormat>
+               <doc:Description>Test VISUALISATION</doc:Description>
+               <doc:Content>
+                  <doc:EmbeddedData>
+                     VGVzdCBjb250ZW50IFZJU1VBTElTQVRJT04=
+                  </doc:EmbeddedData>
+               </doc:Content>
+            </doc:Visualisation>
+         </doc:Visualisations>
+         <doc:Attachments>
+            <doc:Attachment Id="vis-test-a6403283-1638-43f3-8540-8dd3ec1bd4b4">
+               <doc:DataFormat>
+                  <doc:Identifier>attachment identifier</doc:Identifier>
+                  <doc:MimeType>text/plain</doc:MimeType>
+                  <doc:Encoding>base64</doc:Encoding>
+               </doc:DataFormat>
+               <doc:Description>Test ATTACHMENT</doc:Description>
+               <doc:Content>
+                  <doc:EmbeddedData>
+                     VGVzdCBBVFRBQ0hNRU5U
+                  </doc:EmbeddedData>
+               </doc:Content>
+               <doc:FileName>attachment.txt</doc:FileName>
+            </doc:Attachment>
+         </doc:Attachments>
+         <doc:Signatures>
+         </doc:Signatures>
+      </doc:Document>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="954357dd-06e3-46d0-8336-56c812b66cda"/><con:assertion type="Schema Compliance" id="05ba81ac-68a1-4d4e-bcd5-36eba7d31d2b"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="640c8c72-dc7a-4ded-b144-634fa8ffec53"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="GetSigningRequestsRequest" id="8c69f779-c5d4-4fb0-aaf8-7bfc52f6ece8"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MjuDmsWebServiceServiceSoapBinding</con:interface><con:operation>getSigningRequests</con:operation><con:request name="GetSigningRequestsRequest" id="5c992baf-4b60-4337-a0e0-f97d81207e36" sslKeystore="${#TestCase#SSL_cert}"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#DmsEndpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ns:GetSigningRequestsRequest>5</ns:GetSigningRequestsRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="4adde167-7def-489b-8f45-32cbbd0946f5"/><con:assertion type="Schema Compliance" id="4cd50b83-dbd8-42a2-90f7-9cd697d7bd83"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="0b60b047-c087-4033-baf0-25af2f3125f1"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer Signing" id="68b269a8-5465-471e-806d-dec2a63aad6d"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>messageUuid</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>GetSigningRequestsRequest</con:sourceStep><con:sourcePath>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace ns1='http://nio.gov.si/cev/2015/Message';
+declare namespace ns2='http://nio.gov.si/cev/2015/';
+declare namespace ns3='http://nio.gov.si/cev/2015/Document';
+declare namespace ns4='http://dms.mju.comtrade.com/';
+//ns2:MessageUuid</con:sourcePath><con:targetType>messageUuid</con:targetType><con:targetStep>#TestCase#</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="request" name="AcknowledgeSigningRequestsDeliveryRequest" id="a6632c13-06da-4388-933e-f9b747fb3971"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MjuDmsWebServiceServiceSoapBinding</con:interface><con:operation>acknowledgeSigningRequestsDelivery</con:operation><con:request name="AcknowledgeSigningRequestsDeliveryRequest" id="e74daf90-69a7-4ba1-adb5-b35ff9218596" sslKeystore="${#TestCase#SSL_cert}"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@skip_soap_action">false</con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#DmsEndpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ns:AcknowledgeSigningRequestsDeliveryRequest>\r
+         <ns:MessageUuid>${#TestCase#messageUuid}</ns:MessageUuid>
+      </ns:AcknowledgeSigningRequestsDeliveryRequest>
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="6b8318d0-b7df-4ec4-8a44-c434df6a1846"/><con:assertion type="Schema Compliance" id="e312a3a0-8b08-4863-8e23-1910a6e20c2c"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="01510982-627a-4c61-9616-d72164af90f9"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="httprequest" name="Sign" id="8d79c6c1-6f3c-4a43-8e45-e25134466e8a"><con:settings/><con:config method="GET" xsi:type="con:HttpRequest" id="bcc3351d-26f3-4e38-b516-b65a0df492be" name="Sign" sslKeystore="evrocanjeclient.pfx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>${#Project#SignUrl}?uuid=${#TestCase#messageUuid}</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:config></con:testStep><con:testStep type="request" name="GetUndeliveredMessagesRequest" id="13f49395-c3f8-40f7-adc0-cb5deddf8dcc"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MjuDmsWebServiceServiceSoapBinding</con:interface><con:operation>getUndeliveredMessages</con:operation><con:request name="GetUndeliveredMessagesRequest" id="9daa0ab1-c09e-476c-8bff-68c9f3551ab0" sslKeystore="${#TestCase#SSL_cert}"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#DmsEndpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ns:GetUndeliveredMessagesRequest>1</ns:GetUndeliveredMessagesRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="07e33d25-eb2c-4b31-ba6b-4ada4fa0e735"/><con:assertion type="Schema Compliance" id="4ff1c412-b61d-4288-81a1-75a01766d897"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="d34496cd-9d69-4879-bd60-89df5d605656"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="AcknowledgeMessagesDeliveryRequest" id="c287e79a-71ef-4ca7-a100-0fcad88d0468"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MjuDmsWebServiceServiceSoapBinding</con:interface><con:operation>acknowledgeMessagesDelivery</con:operation><con:request name="AcknowledgeMessagesDeliveryRequest" id="33d02abb-ed30-42bb-8dea-fcbf20de788d" sslKeystore="${#TestCase#SSL_cert_TO}"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#DmsEndpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:AcknowledgeMessagesDeliveryRequest>
+         <ns:MessageUuid>${#TestCase#messageUuid}</ns:MessageUuid>
+      </ns:AcknowledgeMessagesDeliveryRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="9b09979e-c864-4fab-949b-13061adc27b4"/><con:assertion type="Schema Compliance" id="8a7b215a-53eb-49a6-a3e6-baa90c3f503f"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="bc7f330b-2465-4462-bda7-5804b377e2c2"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="GetUndeliveredAdviceRequest" id="25214082-5d26-48e0-83a0-a1920dd2e15e"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MjuDmsWebServiceServiceSoapBinding</con:interface><con:operation>getUndeliveredAdvice</con:operation><con:request name="GetUndeliveredAdviceRequest" id="2c93ee40-bd67-413a-a14a-df6eed47d226" sslKeystore="${#TestCase#SSL_cert_FROM}"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#DmsEndpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ns:GetUndeliveredAdviceRequest>1</ns:GetUndeliveredAdviceRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="5250bfae-b750-4424-a234-e6d9ddd8f3fb"/><con:assertion type="SOAP Fault Assertion" id="6bde705b-c90c-4bc3-b209-cbc5ad28eaf8"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer Advice" id="0a893a87-b7c3-47c3-afc5-2d63c037cbdf"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>adviceUuid</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>GetUndeliveredAdviceRequest</con:sourceStep><con:sourcePath>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace ns1='http://nio.gov.si/cev/2015/Message';
+declare namespace ns2='http://nio.gov.si/cev/2015/';
+declare namespace ns3='http://nio.gov.si/cev/2015/Document';
+declare namespace ns4='http://dms.mju.comtrade.com/';
+//ns2:MessageUuid
+</con:sourcePath><con:targetType>adviceUuid</con:targetType><con:targetStep>#TestCase#</con:targetStep><con:targetPath/><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="request" name="AcknowledgeAdviceDeliveryRequest" id="0f7b3ed8-57ec-4670-9bd5-86e53888445f"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MjuDmsWebServiceServiceSoapBinding</con:interface><con:operation>acknowledgeAdviceDelivery</con:operation><con:request name="AcknowledgeAdviceDeliveryRequest" id="75c92e1c-ff13-40df-831e-73485715e3ef" sslKeystore="${#TestCase#SSL_cert}"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#DmsEndpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://nio.gov.si/cev/2015/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ns:AcknowledgeAdviceDeliveryRequest>\r
+         <ns:MessageUuid>${#TestCase#adviceUuid}</ns:MessageUuid>
+      </ns:AcknowledgeAdviceDeliveryRequest>
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="df1ab41f-9f25-4349-9605-3183851f20d9"/><con:assertion type="Schema Compliance" id="2337ba08-248c-42c2-9fe2-accd736c7314"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="aecfdcd9-ac2a-4886-b6be-74e46e9206e7"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:loadTest id="1e3f456b-40b4-40cd-aa6b-8eaf20b353dc" name="LoadTestSVEV1JU"><con:settings/><con:threadCount>5</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>200</con:testLimit><con:limitType>COUNT</con:limitType><con:loadStrategy><con:type>Simple</con:type></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:properties><con:property><con:name>msgUuid</con:name><con:value>79141f2c-37e3-4c0c-b7a4-decb356780c4</con:value></con:property><con:property><con:name>emlFrom</con:name><con:value>gpms@test12-e-gov.si</con:value></con:property><con:property><con:name>emlTo</con:name><con:value>gpmb@test02-e-gov.si</con:value></con:property><con:property><con:name>dataDesc</con:name><con:value>Nulla non bibendum posuere.</con:value></con:property><con:property><con:name>subject</con:name><con:value>Pellentesque habitant amet.</con:value></con:property><con:property><con:name>docId</con:name><con:value>Sed consequat turpis metus.</con:value></con:property><con:property><con:name>relatesTo</con:name><con:value>164e6cc1-daeb-4c2c-9201-4d7d7b4d95e6</con:value></con:property><con:property><con:name>messageUuid</con:name><con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">40bbe6c7-1280-44ce-9834-86f76735cdf9</con:value></con:property><con:property><con:name>SSL_cert</con:name><con:value>src02.pfx</con:value></con:property><con:property><con:name>SSL_cert_TO</con:name><con:value>mju02.pfx</con:value></con:property><con:property><con:name>adviceUuid</con:name><con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">none</con:value></con:property><con:property><con:name>SSL_cert_FROM</con:name><con:value>none</con:value></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>DmsEndpoint</con:name><con:value>https://evrocanje.hermes.si:8443/EV.webservice/services/mjudms</con:value></con:property><con:property><con:name>SignUrl</con:name><con:value>http://evrocanje.hermes.si:8080/EV.web/sign</con:value></con:property><con:property><con:name>DmsEndpoint_evrocanje</con:name><con:value>https://evrocanje.hermes.si:8443/EV.webservice/services/mjudms</con:value></con:property><con:property><con:name>DmsEndpoint_evrdmz</con:name><con:value>https://evrdmz.comtrade.com:8443/EV.webservice/services/mjudms</con:value></con:property><con:property><con:name>SignUrl_evrdmz</con:name><con:value>http://evrdmz.comtrade.com:8080/EV.web/sign</con:value></con:property><con:property><con:name>SignUrl_evrocanje</con:name><con:value>http://evrocanje.hermes.si:8080/EV.web/sign</con:value></con:property><con:property><con:name>SSL_cert_FROM</con:name><con:value>mju01.pfx</con:value></con:property><con:property><con:name>SSL_cert_TO</con:name><con:value>src01.pfx</con:value></con:property><con:property><con:name>SSL_cert</con:name><con:value>src02.pfx</con:value></con:property></con:properties><con:wssContainer><con:crypto><con:source>C:/ENV/workspace/evrocanje/Certs/finca/evrocanjeclient.pfx</con:source><con:password>changeit</con:password><con:type>KEYSTORE</con:type></con:crypto><con:crypto><con:source>C:/ENV/workspace/evrocanje/Certs/finca/mju01.pfx</con:source><con:password>mju01</con:password><con:type>KEYSTORE</con:type></con:crypto><con:crypto><con:source>C:/ENV/workspace/evrocanje/Certs/finca/mju02.pfx</con:source><con:password>mju02</con:password><con:type>KEYSTORE</con:type></con:crypto><con:crypto><con:source>C:/ENV/workspace/evrocanje/Certs/finca/src01.pfx</con:source><con:password>src01</con:password><con:type>KEYSTORE</con:type></con:crypto><con:crypto><con:source>C:/ENV/workspace/evrocanje/Certs/finca/src02.pfx</con:source><con:password>src02</con:password><con:type>KEYSTORE</con:type></con:crypto></con:wssContainer><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
